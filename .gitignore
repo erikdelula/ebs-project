@@ -1,0 +1,8 @@
+impeccable-test/src/
+impeccable-test/pkg/
+impeccable-test/B/node_modules/
+impeccable-test/B/.claude/
+impeccable-test/B/package.json
+impeccable-test/shots/node_modules/
+impeccable-test/shots/package*.json
+node_modules/

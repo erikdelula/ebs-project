@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gatopardo Media | Fotografía y video comercial en El Salvador</title>
+<meta name="description" content="Fotografía comercial y video cinematográfico para hoteles, restaurantes, arquitectura e inmobiliarias en El Salvador. Imagen que trae reservas directas y eleva el valor percibido.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --anil:#1B2470;
+  --anil-deep:#121A55;
+  --anil-soft:#2B3796;
+  --cal:#E6EBF7;
+  --tinta:#141B4D;
+  --tinta-2:#414A86;
+  --sol:#FF7A3D;
+  --sol-deep:#E55F22;
+  --on-anil:#F4F6FF;
+  --on-anil-2:#BAC3F2;
+  --line-anil:rgba(186,195,242,.28);
+  --line-cal:rgba(20,27,77,.22);
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --text:"Hanken Grotesk",system-ui,sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --gutter:clamp(20px,5vw,72px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scrollbar-color:var(--sol) var(--anil-deep)}
+body{margin:0;background:var(--anil);color:var(--on-anil);font:400 1.0625rem/1.6 var(--text);-webkit-font-smoothing:antialiased}
+::selection{background:var(--sol);color:var(--anil-deep)}
+::-webkit-scrollbar{width:12px}::-webkit-scrollbar-track{background:var(--anil-deep)}::-webkit-scrollbar-thumb{background:var(--sol);border:3px solid var(--anil-deep)}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
+:focus-visible{outline:3px solid var(--sol);outline-offset:3px}
+.skip{position:absolute;left:12px;top:-60px;background:var(--sol);color:var(--anil-deep);padding:10px 16px;font-weight:600;z-index:50;text-decoration:none}
+.skip:focus{top:12px}
+.wrap{max-width:1560px;margin-inline:auto}
+main>section,footer{padding-inline:var(--gutter)}
+header.top{padding-inline:var(--gutter)}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-.03em;line-height:1.02}
+h2{font-size:clamp(2.1rem,4.6vw,4rem);font-weight:800}
+p{margin:0;max-width:66ch;text-wrap:pretty}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:.6em;min-height:52px;padding:0 28px;background:var(--sol);color:var(--anil-deep);font:700 1.0625rem/1 var(--display);letter-spacing:-.01em;border:0;border-radius:4px;text-decoration:none;cursor:pointer;transition:background .25s var(--ease),transform .25s var(--ease)}
+.btn:hover{background:#FF8F5C;transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn svg{width:18px;height:18px;transition:transform .25s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.btn[disabled]{opacity:.6;cursor:progress}
+
+/* Header */
+header.top{position:absolute;inset:0 0 auto 0;z-index:10}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:88px}
+.brand{display:flex;align-items:center;gap:12px;font:800 1.25rem/1 var(--display);letter-spacing:-.03em;text-decoration:none}
+.brand svg{width:34px;height:34px;color:var(--sol)}
+.top .btn{min-height:44px;padding:0 20px;font-size:.9375rem}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;background:var(--anil);min-height:min(100svh,940px);display:flex;align-items:center;padding-block:140px 88px}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero h1{font-size:clamp(2.9rem,7.4vw,6rem);font-weight:800;max-width:13ch;letter-spacing:-.04em}
+.hero h1 em{font-style:normal;color:var(--sol)}
+.hero .lede{margin-top:28px;font-size:clamp(1.125rem,1.6vw,1.375rem);color:var(--on-anil-2);max-width:48ch}
+.hero .cta{margin-top:40px;display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center}
+.hero .cta a.sec{font-weight:600;color:var(--on-anil)}
+.lens{position:absolute;z-index:1;right:calc(-14vw);top:50%;width:min(62vw,860px);aspect-ratio:1;transform:translateY(-46%);color:var(--anil-soft)}
+.lens .spin{transform-origin:center;animation:turn 120s linear infinite}
+.lens .sun{color:var(--sol)}
+@keyframes turn{to{transform:rotate(360deg)}}
+.hero-note{position:absolute;z-index:2;left:var(--gutter);bottom:28px;font-size:.875rem;color:var(--on-anil-2)}
+
+/* Services */
+.panel-cal{background:var(--cal);color:var(--tinta)}
+.panel-cal p{color:var(--tinta-2)}
+section{padding-block:clamp(72px,10vw,144px)}
+.hero{padding-inline:var(--gutter)}
+.services h2{max-width:16ch}
+.svc-list{list-style:none;margin:clamp(40px,6vw,80px) 0 0;padding:0;border-top:2px solid var(--tinta)}
+.svc{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr) auto;gap:16px clamp(24px,5vw,80px);align-items:start;padding:36px 16px;border-bottom:1px solid var(--line-cal);transition:background .3s var(--ease),padding .3s var(--ease)}
+.svc h3{font-size:clamp(1.7rem,3vw,2.6rem);font-weight:800;letter-spacing:-.035em}
+.svc .result{font:700 1.0625rem/1.4 var(--display);color:var(--tinta);margin-bottom:10px;letter-spacing:-.01em}
+.svc .tags{font-size:.9375rem;color:var(--tinta-2);margin-top:14px}
+.svc .dot{width:64px;height:64px;color:var(--anil)}
+.svc:hover{background:rgba(27,36,112,.06)}
+
+/* Work */
+.work{background:var(--anil-deep)}
+.work-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:24px}
+.work-head h2{max-width:14ch}
+.work-head p{color:var(--on-anil-2);max-width:40ch}
+.grid{margin-top:clamp(40px,5vw,72px);display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.tile{position:relative;margin:0;overflow:hidden;border-radius:4px;background:var(--anil);isolation:isolate;min-height:300px}
+.tile svg.art{position:absolute;inset:0;width:100%;height:100%}
+.tile figcaption{position:absolute;inset:auto 0 0 0;padding:20px;background:linear-gradient(to top,rgba(18,26,85,.92),rgba(18,26,85,0));display:flex;flex-direction:column;gap:2px}
+.tile b{font:700 1.25rem/1.2 var(--display);letter-spacing:-.02em}
+.tile span{font-size:.875rem;color:var(--on-anil-2)}
+.tile .ph{position:absolute;top:14px;left:14px;font-size:.75rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;background:var(--anil-deep);color:var(--on-anil);padding:6px 10px;border-radius:2px}
+.tile svg.art *{transition:transform .8s var(--ease)}
+.tile:hover svg.art .m{transform:translateY(-10px)}
+.t1{grid-column:span 7;min-height:520px}
+.t2{grid-column:span 5;min-height:520px}
+.t3{grid-column:span 4}
+.t4{grid-column:span 4}
+.t5{grid-column:span 4}
+.t6{grid-column:span 12;min-height:360px}
+.work-foot{margin-top:28px;color:var(--on-anil-2);font-size:.9375rem}
+
+/* Process */
+.process h2{max-width:15ch}
+.steps{list-style:none;margin:clamp(48px,6vw,88px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.steps::before{content:"";position:absolute;left:0;right:0;top:11px;height:2px;background:var(--tinta)}
+.step{position:relative;padding:48px 28px 0 0}
+.step::before{content:"";position:absolute;top:0;left:0;width:24px;height:24px;border-radius:50%;background:var(--sol);border:4px solid var(--cal);box-shadow:0 0 0 2px var(--tinta)}
+.step h3{font-size:1.6rem;font-weight:800;letter-spacing:-.03em;margin-bottom:12px}
+.step p{font-size:1rem}
+
+/* Proof */
+.proof{background:var(--anil)}
+.proof-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,7vw,120px);align-items:start}
+.proof h2{max-width:12ch}
+.pf{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-anil)}
+.pf li{padding:26px 0;border-bottom:1px solid var(--line-anil)}
+.pf strong{display:block;font:700 1.375rem/1.25 var(--display);letter-spacing:-.02em;margin-bottom:6px}
+.pf p{color:var(--on-anil-2)}
+.audience{margin-top:32px;color:var(--on-anil-2);font-size:1rem}
+
+/* CTA */
+.cta-sec{background:var(--cal);color:var(--tinta)}
+.cta-grid{display:grid;grid-template-columns:6fr 6fr;gap:clamp(32px,7vw,110px);align-items:start}
+.cta-sec h2{max-width:11ch;font-size:clamp(2.4rem,5.4vw,4.75rem)}
+.cta-sec .sub{margin-top:24px;color:var(--tinta-2);font-size:1.125rem}
+form{display:grid;gap:22px;background:var(--anil);color:var(--on-anil);padding:clamp(24px,3.5vw,44px);border-radius:4px}
+label{display:block;font-weight:600;font-size:.9375rem;margin-bottom:8px}
+input,textarea{width:100%;font:inherit;color:var(--on-anil);background:var(--anil-deep);border:1.5px solid var(--on-anil-2);border-radius:4px;padding:14px 16px;min-height:52px;caret-color:var(--sol)}
+textarea{min-height:130px;resize:vertical}
+input::placeholder,textarea::placeholder{color:#9DA7E0}
+input:hover,textarea:hover{border-color:var(--on-anil)}
+input:focus-visible,textarea:focus-visible{outline:3px solid var(--sol);outline-offset:2px;border-color:var(--sol)}
+input:user-invalid,textarea:user-invalid{border-color:#FFB08A}
+.hint{font-size:.875rem;color:var(--on-anil-2);margin-top:6px}
+form .btn{justify-self:start;width:100%;justify-content:center}
+#status{min-height:1.5em;font-weight:600;color:var(--on-anil)}
+#status.ok{color:#FFD2B9}
+
+/* Footer */
+footer{background:var(--anil-deep);padding-block:56px 40px}
+.foot{display:flex;flex-wrap:wrap;gap:32px 64px;justify-content:space-between;align-items:end}
+footer .brand{font-size:1.75rem}
+footer p{color:var(--on-anil-2);font-size:.9375rem}
+footer a{font-weight:600}
+.legal{margin-top:40px;padding-top:20px;border-top:1px solid var(--line-anil);font-size:.875rem;color:var(--on-anil-2)}
+
+/* Reveal: visible by default, enhanced only with JS */
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+
+@media (max-width:1000px){
+  .lens{right:-40vw;width:110vw;opacity:.55}
+  .svc{grid-template-columns:1fr auto}
+  .svc .desc{grid-column:1/-1;grid-row:2}
+  .steps{grid-template-columns:1fr 1fr;row-gap:48px}
+  .steps::before{display:none}
+  .step{padding-top:40px;border-top:2px solid var(--tinta)}
+  .step::before{top:-13px}
+  .proof-grid,.cta-grid{grid-template-columns:1fr}
+  .t1,.t2,.t3,.t4,.t5,.t6{grid-column:span 12;min-height:320px}
+}
+@media (max-width:560px){
+  body{font-size:1rem}
+  header.top .wrap{height:72px}
+  .top .btn{padding:0 14px}
+  .hero{padding-block:110px 96px;align-items:flex-start}
+  .hero .cta .btn{width:100%;justify-content:center}
+  .svc .dot{width:44px;height:44px}
+  .steps{grid-template-columns:1fr}
+  .hero-note{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .lens .spin{animation:none}
+  .js .rv{opacity:1;transform:none;transition:none}
+  *{transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#solicitar">Ir al formulario</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="rosette" viewBox="0 0 100 100">
+      <g fill="none" stroke="currentColor" stroke-linecap="round">
+        <path d="M50 8a42 42 0 0 1 30 12" stroke-width="10"/>
+        <path d="M88 38a42 42 0 0 1-6 34" stroke-width="13"/>
+        <path d="M68 90a42 42 0 0 1-38 2" stroke-width="9"/>
+        <path d="M14 72a42 42 0 0 1-4-30" stroke-width="12"/>
+        <path d="M22 18a42 42 0 0 1 14-8" stroke-width="8"/>
+      </g>
+      <circle cx="50" cy="50" r="13" fill="currentColor"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Gatopardo Media, inicio">
+      <svg aria-hidden="true"><use href="#rosette"/></svg>
+      Gatopardo Media
+    </a>
+    <a class="btn" href="#solicitar">Solicitar propuesta</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="h1">
+    <svg class="lens" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
+      <g class="spin">
+        <use href="#rosette" x="20" y="20" width="360" height="360"/>
+        <use href="#rosette" x="90" y="90" width="220" height="220" style="transform-origin:200px 200px;transform:rotate(40deg)"/>
+      </g>
+      <g class="sun"><circle cx="200" cy="200" r="36" fill="currentColor"/></g>
+    </svg>
+    <div class="wrap">
+      <h1 id="h1">Imagen que llena tus <em>reservas directas.</em></h1>
+      <p class="lede">Fotografía comercial y video cinematográfico para hoteles, restaurantes, arquitectura y alquiler vacacional premium. Hecho para que tu propiedad valga más a los ojos de quien decide.</p>
+      <div class="cta">
+        <a class="btn" href="#solicitar">Solicitar propuesta
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10h13M11 4l6 6-6 6"/></svg>
+        </a>
+        <a class="sec" href="#trabajo">Ver trabajo seleccionado</a>
+      </div>
+    </div>
+    <p class="hero-note">Estudio de producción visual en El Salvador</p>
+  </section>
+
+  <section class="services panel-cal" id="servicios" aria-labelledby="h-serv">
+    <div class="wrap">
+      <h2 id="h-serv" class="rv">Tres líneas, un mismo objetivo: que te elijan.</h2>
+      <ul class="svc-list">
+        <li class="svc rv">
+          <div>
+            <h3>Hoteles y hospitalidad</h3>
+          </div>
+          <div class="desc">
+            <p class="result">Para que el huésped reserve contigo y no con el intermediario.</p>
+            <p>Habitaciones, áreas comunes, experiencias y ambiente contados con la luz y el ritmo que venden la estadía antes de llegar. Material listo para tu web, motor de reservas, OTAs y redes.</p>
+            <p class="tags">Fotografía de propiedad · Video de marca · Contenido para temporadas</p>
+          </div>
+          <svg class="dot" viewBox="0 0 100 100" aria-hidden="true"><use href="#rosette" width="100" height="100"/></svg>
+        </li>
+        <li class="svc rv">
+          <div>
+            <h3>Gastronomía</h3>
+          </div>
+          <div class="desc">
+            <p class="result">Para que el plato justifique el precio antes de la primera mesa.</p>
+            <p>Platos, cocina, barra y sala fotografiados y filmados con criterio de estilista. Un menú que se ve como se come, y un restaurante que se percibe a la altura de su carta.</p>
+            <p class="tags">Fotografía de platos · Reels y spots · Retrato de chef y equipo</p>
+          </div>
+          <svg class="dot" viewBox="0 0 100 100" aria-hidden="true"><use href="#rosette" width="100" height="100"/></svg>
+        </li>
+        <li class="svc rv">
+          <div>
+            <h3>Arquitectura e inmobiliaria</h3>
+          </div>
+          <div class="desc">
+            <p class="result">Para vender y arrendar con el valor que el diseño ya tiene.</p>
+            <p>Obra, proyecto y espacio mostrados con geometría, escala y luz correctas, para que el comprador vea lo que el arquitecto pensó. Imagen para preventa, portafolio de despacho y casas vacacionales premium.</p>
+            <p class="tags">Fotografía de arquitectura · Recorridos en video · Imagen de preventa</p>
+          </div>
+          <svg class="dot" viewBox="0 0 100 100" aria-hidden="true"><use href="#rosette" width="100" height="100"/></svg>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="work" id="trabajo" aria-labelledby="h-work">
+    <div class="wrap">
+      <div class="work-head">
+        <h2 id="h-work" class="rv">Trabajo seleccionado</h2>
+        <p class="rv">Los recuadros son composiciones de referencia: muestran el encuadre y la luz que planeamos para cada tipo de proyecto. La obra real se enseña en la reunión.</p>
+      </div>
+
+      <div class="grid">
+        <figure class="tile t1 rv" tabindex="0" aria-label="Espacio reservado: hotel boutique, fachada al atardecer">
+          <svg class="art" viewBox="0 0 700 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="700" height="520" fill="#2B3796"/>
+            <circle cx="470" cy="190" r="110" fill="#FF7A3D"/>
+            <g class="m"><path d="M0 330h700v190H0z" fill="#1B2470"/>
+            <path d="M120 520V250a90 90 0 0 1 180 0v270z" fill="#121A55"/>
+            <path d="M360 520V290a70 70 0 0 1 140 0v230z" fill="#121A55"/>
+            <path d="M540 520V330a55 55 0 0 1 110 0v190z" fill="#121A55"/></g>
+            <path d="M0 440h700" stroke="#BAC3F2" stroke-opacity=".35" stroke-width="2"/>
+          </svg>
+          <span class="ph">Espacio para fotografía</span>
+          <figcaption><b>Hotel boutique, exterior al atardecer</b><span>Fotografía de propiedad</span></figcaption>
+        </figure>
+
+        <figure class="tile t2 rv" tabindex="0" aria-label="Espacio reservado: gastronomía, plato cenital">
+          <svg class="art" viewBox="0 0 500 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="500" height="520" fill="#FF7A3D"/>
+            <g class="m"><circle cx="250" cy="250" r="170" fill="#E6EBF7"/>
+            <circle cx="250" cy="250" r="125" fill="none" stroke="#1B2470" stroke-width="3"/>
+            <use href="#rosette" x="170" y="170" width="160" height="160" style="color:#1B2470"/></g>
+            <rect x="0" y="440" width="500" height="80" fill="#1B2470" opacity=".9"/>
+          </svg>
+          <span class="ph">Espacio para fotografía</span>
+          <figcaption><b>Plato principal, toma cenital</b><span>Gastronomía</span></figcaption>
+        </figure>
+
+        <figure class="tile t3 rv" tabindex="0" aria-label="Espacio reservado: arquitectura, planos de luz">
+          <svg class="art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="400" height="300" fill="#E6EBF7"/>
+            <g class="m"><path d="M0 0h260L130 300H0z" fill="#1B2470"/>
+            <path d="M260 0h140v300H210z" fill="#2B3796"/>
+            <path d="M130 300L260 0l-50 300z" fill="#FF7A3D"/></g>
+          </svg>
+          <span class="ph">Espacio para fotografía</span>
+          <figcaption><b>Volumen y sombra</b><span>Arquitectura</span></figcaption>
+        </figure>
+
+        <figure class="tile t4 rv" tabindex="0" aria-label="Espacio reservado: alquiler vacacional, piscina">
+          <svg class="art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="400" height="300" fill="#121A55"/>
+            <g class="m"><rect x="40" y="70" width="320" height="160" fill="#2B3796"/>
+            <rect x="40" y="70" width="320" height="26" fill="#BAC3F2" opacity=".45"/>
+            <path d="M40 150q40-18 80 0t80 0 80 0 80 0" stroke="#E6EBF7" stroke-width="3" fill="none" opacity=".6"/>
+            <circle cx="330" cy="40" r="22" fill="#FF7A3D"/></g>
+          </svg>
+          <span class="ph">Espacio para fotografía</span>
+          <figcaption><b>Casa vacacional, piscina</b><span>Alquiler premium</span></figcaption>
+        </figure>
+
+        <figure class="tile t5 rv" tabindex="0" aria-label="Espacio reservado: video cinematográfico, fotograma">
+          <svg class="art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="400" height="300" fill="#1B2470"/>
+            <rect y="0" width="400" height="44" fill="#000" opacity=".55"/>
+            <rect y="256" width="400" height="44" fill="#000" opacity=".55"/>
+            <g class="m"><use href="#rosette" x="110" y="60" width="180" height="180" style="color:#FF7A3D"/></g>
+          </svg>
+          <span class="ph">Espacio para video</span>
+          <figcaption><b>Fotograma de pieza cinematográfica</b><span>Video</span></figcaption>
+        </figure>
+
+        <figure class="tile t6 rv" tabindex="0" aria-label="Espacio reservado: hotel, habitación con ventanal">
+          <svg class="art" viewBox="0 0 1200 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="1200" height="360" fill="#2B3796"/>
+            <g class="m"><rect x="80" y="50" width="420" height="250" fill="#E6EBF7"/>
+            <path d="M290 50v250M80 175h420" stroke="#1B2470" stroke-width="6"/>
+            <circle cx="390" cy="120" r="34" fill="#FF7A3D"/>
+            <path d="M600 300V190h420v110z" fill="#121A55"/>
+            <path d="M640 190v-40h340v40z" fill="#BAC3F2" opacity=".5"/></g>
+          </svg>
+          <span class="ph">Espacio para fotografía</span>
+          <figcaption><b>Habitación con ventanal</b><span>Hoteles y hospitalidad</span></figcaption>
+        </figure>
+      </div>
+      <p class="work-foot">Solicita la propuesta y te presentamos trabajo real afín a tu sector.</p>
+    </div>
+  </section>
+
+  <section class="process panel-cal" id="proceso" aria-labelledby="h-proc">
+    <div class="wrap">
+      <h2 id="h-proc" class="rv">Cómo trabajamos</h2>
+      <ol class="steps">
+        <li class="step rv">
+          <h3>Entender el negocio</h3>
+          <p>Antes de tomar una cámara, definimos contigo qué debe lograr la imagen: más reservas directas, mejor posicionamiento o un proyecto que se venda.</p>
+        </li>
+        <li class="step rv">
+          <h3>Plan de producción</h3>
+          <p>Lista de tomas, horarios de luz y estilismo pensados alrededor de ese objetivo y del canal donde se usará cada pieza.</p>
+        </li>
+        <li class="step rv">
+          <h3>Rodaje y sesión</h3>
+          <p>Producimos en tu propiedad con el mínimo de interrupción para tus huéspedes, tu servicio o tu obra.</p>
+        </li>
+        <li class="step rv">
+          <h3>Entrega y uso</h3>
+          <p>Material editado y organizado por canal: web, reservas, OTAs, redes, prensa y venta, listo para publicar.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="proof" aria-labelledby="h-proof">
+    <div class="wrap proof-grid">
+      <div>
+        <h2 id="h-proof" class="rv">Lo que puedes exigirnos.</h2>
+        <p class="audience rv">Trabajamos con directores de hotel y restaurante, desarrolladores, arquitectos y propietarios de alquiler vacacional premium.</p>
+      </div>
+      <ul class="pf">
+        <li class="rv"><strong>Cada pieza responde a una meta de negocio.</strong><p>Te pedimos el objetivo al inicio y el material se organiza para cumplirlo, no para lucir en un portafolio.</p></li>
+        <li class="rv"><strong>Una sola mirada para foto y video.</strong><p>El mismo equipo y la misma dirección de arte: tu marca se ve coherente en todos los canales.</p></li>
+        <li class="rv"><strong>Conoces el alcance antes de decidir.</strong><p>La propuesta detalla qué se produce, qué recibes y cómo se usa. Sin sorpresas después.</p></li>
+        <li class="rv"><strong>Trabajo real, a tu medida.</strong><p>Te enseñamos proyectos afines a tu sector durante la conversación de propuesta.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cta-sec" id="solicitar" aria-labelledby="h-cta">
+    <div class="wrap cta-grid">
+      <div>
+        <h2 id="h-cta" class="rv">Hablemos de lo que tu imagen debe lograr.</h2>
+        <p class="sub rv">Cuéntanos quién eres y qué necesitas. Te respondemos con una propuesta enfocada en tu resultado.</p>
+      </div>
+      <form id="form" class="rv" novalidate>
+        <div>
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" autocomplete="name" required placeholder="Tu nombre y apellido">
+        </div>
+        <div>
+          <label for="empresa">Empresa o proyecto</label>
+          <input id="empresa" name="empresa" type="text" autocomplete="organization" required placeholder="Hotel, restaurante, desarrolladora, despacho...">
+        </div>
+        <div>
+          <label for="necesidad">¿Qué necesitas?</label>
+          <textarea id="necesidad" name="necesidad" required placeholder="Ej. fotografía y video para la apertura de temporada, o para un proyecto en preventa."></textarea>
+          <p class="hint">Con una o dos líneas nos basta.</p>
+        </div>
+        <button class="btn" type="submit">Solicitar propuesta</button>
+        <p id="status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#inicio"><svg aria-hidden="true"><use href="#rosette"/></svg>Gatopardo Media</a>
+        <p style="margin-top:14px">Fotografía comercial y video cinematográfico.<br>El Salvador.</p>
+      </div>
+      <nav aria-label="Pie de página">
+        <p><a href="#servicios">Servicios</a> &nbsp;·&nbsp; <a href="#trabajo">Trabajo</a> &nbsp;·&nbsp; <a href="#proceso">Proceso</a> &nbsp;·&nbsp; <a href="#solicitar">Solicitar propuesta</a></p>
+      </nav>
+    </div>
+    <p class="legal">&copy; 2026 Gatopardo Media. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var d=document.documentElement;
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if('IntersectionObserver' in window && !reduce){
+    d.classList.add('js');
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%4)*70+'ms';io.observe(el)});
+  }
+  var f=document.getElementById('form'),s=document.getElementById('status');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    s.className='';
+    if(!f.checkValidity()){
+      var bad=f.querySelector(':invalid');
+      s.textContent='Completa los campos marcados para poder enviarte la propuesta.';
+      bad.focus();return;
+    }
+    // TODO: conectar con el endpoint o correo real de Gatopardo Media.
+    s.className='ok';
+    s.textContent='Recibido. Revisaremos tu solicitud y te responderemos con una propuesta.';
+    f.reset();
+  });
+})();
+</script>
+</body>
+</html>

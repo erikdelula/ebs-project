@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gatopardo Media | Fotografía y video comercial para hoteles, restaurantes y arquitectura</title>
+<meta name="description" content="Estudio de fotografía comercial y video cinematográfico en El Salvador. Imágenes que generan más reservas directas y elevan el valor percibido de tu propiedad o marca.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#14120f;--bg2:#1c1915;--ink:#f3ede2;--mute:#a79f8f;--line:#3a352c;
+  --gold:#d6a84f;--gold-d:#b98a33;--on-gold:#1a1408;
+  --serif:'Fraunces',Georgia,serif;--sans:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--gold);color:var(--on-gold);padding:8px 14px;z-index:99}
+.skip:focus{left:8px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1;letter-spacing:-.01em}
+h1{font-size:clamp(2.4rem,6vw,4.75rem)}
+h2{font-size:clamp(1.9rem,4vw,3rem)}
+h3{font-size:1.4rem}
+.eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;display:block}
+.btn{display:inline-block;background:var(--gold);color:var(--on-gold);font-weight:600;text-decoration:none;padding:16px 28px;border:0;border-radius:2px;font:600 1rem var(--sans);cursor:pointer;transition:background .2s,transform .2s}
+.btn:hover{background:#e6bc6a;transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--gold);background:transparent}
+section{padding:96px 0}
+header.top{position:absolute;inset:0 0 auto 0;z-index:5}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;height:80px}
+.logo{font-family:var(--serif);font-size:1.3rem;letter-spacing:.04em;text-decoration:none}
+.logo span{color:var(--gold)}
+header.top a.lnk{font-size:.9rem;text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px}
+
+/* hero */
+.hero{position:relative;padding:180px 0 110px;overflow:hidden;background:
+  radial-gradient(900px 500px at 85% 20%,rgba(214,168,79,.18),transparent 60%),var(--bg)}
+.hero .grid{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:end}
+.hero p.lead{font-size:1.2rem;color:var(--mute);max-width:34em;margin:28px 0 36px}
+.hero p.lead strong{color:var(--ink);font-weight:500}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.frame{aspect-ratio:3/4;border:1px solid var(--line);position:relative;background:
+  linear-gradient(160deg,#2a231a,#15120e 70%);overflow:hidden}
+.frame::before{content:"";position:absolute;inset:14px;border:1px solid rgba(214,168,79,.35)}
+.frame::after{content:"";position:absolute;left:50%;bottom:-20%;width:140%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(214,168,79,.55),rgba(214,168,79,0) 62%)}
+.frame small{position:absolute;left:28px;bottom:26px;z-index:2;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+
+/* services */
+.services{background:var(--bg2);border-block:1px solid var(--line)}
+.head{max-width:700px;margin-bottom:56px}
+.head p{color:var(--mute);margin-top:18px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.card{background:var(--bg2);padding:36px 30px}
+.card .n{font-family:var(--serif);color:var(--gold);font-size:1rem}
+.card h3{margin:14px 0 12px}
+.card p{color:var(--mute);font-size:.98rem}
+.card .res{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);font-size:.92rem;color:var(--ink)}
+.card .res b{color:var(--gold);font-weight:600}
+
+/* work */
+.work-grid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:150px;gap:16px}
+.tile{position:relative;overflow:hidden;border:1px solid var(--line);display:flex;align-items:flex-end;padding:22px}
+.tile span.t{position:relative;z-index:2}
+.tile .k{display:block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.tile .tt{font-family:var(--serif);font-size:1.3rem;line-height:1.2}
+.tile::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(10,8,5,.75),transparent 60%)}
+.t1{grid-column:span 7;grid-row:span 3;background:radial-gradient(circle at 70% 30%,#d6a84f66,transparent 45%),linear-gradient(135deg,#3b2f1d,#15120e)}
+.t2{grid-column:span 5;grid-row:span 2;background:radial-gradient(circle at 25% 70%,#c2562f55,transparent 50%),linear-gradient(200deg,#2b1e18,#14120f)}
+.t3{grid-column:span 5;grid-row:span 1;background:repeating-linear-gradient(90deg,#221e18 0 38px,#2a251d 38px 40px)}
+.t4{grid-column:span 4;grid-row:span 2;background:linear-gradient(180deg,#2d3a38,#121615)}
+.t5{grid-column:span 4;grid-row:span 2;background:radial-gradient(circle at 50% 40%,#d6a84f44,transparent 55%),#1e1b16}
+.t6{grid-column:span 4;grid-row:span 2;background:linear-gradient(120deg,#1c1915 40%,#3a2f1c)}
+.tile .ln{position:absolute;inset:0;z-index:0;opacity:.35}
+.note{margin-top:20px;font-size:.85rem;color:var(--mute)}
+
+/* process */
+.process{background:var(--bg2);border-block:1px solid var(--line)}
+.steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;counter-reset:s}
+.steps li{counter-increment:s;border-top:2px solid var(--gold);padding-top:22px}
+.steps li::before{content:"0" counter(s);font-family:var(--serif);font-size:2.2rem;color:var(--gold);display:block;margin-bottom:10px}
+.steps h3{font-size:1.2rem;margin-bottom:8px}
+.steps p{color:var(--mute);font-size:.95rem}
+
+/* proof */
+.proof .box{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.proof blockquote{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.25}
+.proof blockquote footer{font:400 .9rem var(--sans);color:var(--mute);margin-top:20px}
+.facts{list-style:none;padding:0;display:grid;gap:22px}
+.facts li{padding-left:22px;position:relative}
+.facts li::before{content:"";position:absolute;left:0;top:.7em;width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
+.facts b{display:block;font-weight:600}
+.facts span{color:var(--mute);font-size:.95rem}
+
+/* cta */
+.cta{background:radial-gradient(800px 400px at 15% 0%,rgba(214,168,79,.16),transparent 60%),var(--bg2);border-top:1px solid var(--line)}
+.cta .grid{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.cta p{color:var(--mute);margin-top:18px}
+form{display:grid;gap:20px}
+label{display:block;font-size:.88rem;font-weight:500;margin-bottom:6px}
+input,select,textarea{width:100%;background:var(--bg);border:1px solid #5a5345;color:var(--ink);padding:14px;font:400 1rem var(--sans);border-radius:2px}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);outline:2px solid var(--gold);outline-offset:1px}
+.fine{font-size:.82rem;color:var(--mute);margin:0!important}
+#ok{display:none;border:1px solid var(--gold);padding:18px;color:var(--ink)}
+
+footer.f{padding:48px 0;border-top:1px solid var(--line);font-size:.9rem;color:var(--mute)}
+footer.f .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer.f a{text-decoration:none;border-bottom:1px solid var(--line)}
+
+@media(max-width:900px){
+  section{padding:72px 0}
+  .hero{padding:130px 0 72px}
+  .hero .grid,.proof .box,.cta .grid{grid-template-columns:1fr;gap:40px}
+  .frame{aspect-ratio:16/10}
+  .cards{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .work-grid{grid-template-columns:1fr 1fr;grid-auto-rows:130px}
+  .t1{grid-column:span 2;grid-row:span 2}
+  .t2,.t3,.t4,.t5,.t6{grid-column:span 1;grid-row:span 2}
+  .t3{grid-column:span 2;grid-row:span 1}
+}
+@media(max-width:520px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  .steps{grid-template-columns:1fr}
+  .btn{width:100%;text-align:center}
+  header.top a.lnk{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#propuesta">Saltar al formulario</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="Gatopardo Media, inicio">Gatopardo<span>.</span>Media</a>
+    <a class="lnk" href="#propuesta">Solicitar propuesta</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Fotografía y video cinematográfico · El Salvador</span>
+      <h1 id="h1">Tus imágenes deciden si reservan contigo o con otro.</h1>
+      <p class="lead">Producimos fotografía comercial y video cinematográfico para hoteles, restaurantes y proyectos de arquitectura. <strong>Imágenes pensadas para convertir más reservas directas y elevar el valor percibido de lo que vendes.</strong></p>
+      <div class="cta-row">
+        <a class="btn" href="#propuesta">Solicitar propuesta</a>
+        <a class="btn ghost" href="#trabajo">Ver el enfoque</a>
+      </div>
+    </div>
+    <div class="frame" role="img" aria-label="Composición gráfica decorativa: marco dorado sobre fondo oscuro con un resplandor de luz cálida"><small>Luz · Encuadre · Intención</small></div>
+  </div>
+</section>
+
+<section class="services" id="servicios" aria-labelledby="h-serv">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Qué hacemos</span>
+      <h2 id="h-serv">Tres líneas de producción, un mismo objetivo: vender mejor.</h2>
+      <p>Cada proyecto parte de una pregunta de negocio, no de una lista de tomas.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <span class="n">01</span>
+        <h3>Hoteles y hospitalidad</h3>
+        <p>Habitaciones, áreas comunes, experiencias y detrás de escena. Un archivo visual completo para tu web, tus canales de venta y tus campañas.</p>
+        <p class="res"><b>Resultado:</b> una web que convence y más reservas directas sin depender de comisiones.</p>
+      </article>
+      <article class="card">
+        <span class="n">02</span>
+        <h3>Gastronomía</h3>
+        <p>Platos, bar, equipo y ambiente, con dirección de arte y luz de cine. Fotografía y reels que despiertan antojo y justifican tu precio.</p>
+        <p class="res"><b>Resultado:</b> una marca que se percibe premium y una mesa que se llena.</p>
+      </article>
+      <article class="card">
+        <span class="n">03</span>
+        <h3>Arquitectura e inmobiliario</h3>
+        <p>Proyectos terminados, en obra y en venta: fotografía de espacio y video que muestran la intención del diseño y la vida dentro de él.</p>
+        <p class="res"><b>Resultado:</b> mejor posicionamiento del proyecto y conversaciones de venta más cortas.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="trabajo" aria-labelledby="h-work">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Trabajo seleccionado</span>
+      <h2 id="h-work">Así pensamos una imagen antes de disparar.</h2>
+      <p>Estudios de composición y luz por categoría. Los casos reales se presentan con autorización de cada cliente durante la propuesta.</p>
+    </div>
+    <div class="work-grid" role="list">
+      <div class="tile t1" role="listitem"><span class="t"><span class="k">Hotel boutique</span><span class="tt">La hora dorada en fachada y lobby</span></span></div>
+      <div class="tile t2" role="listitem"><span class="t"><span class="k">Gastronomía</span><span class="tt">Plato principal, luz lateral</span></span></div>
+      <div class="tile t3" role="listitem"><span class="t"><span class="k">Arquitectura</span><span class="tt">Ritmo y textura</span></span></div>
+      <div class="tile t4" role="listitem"><span class="t"><span class="k">Renta vacacional</span><span class="tt">Terraza al amanecer</span></span></div>
+      <div class="tile t5" role="listitem"><span class="t"><span class="k">Video</span><span class="tt">Reel de 30 segundos</span></span></div>
+      <div class="tile t6" role="listitem"><span class="t"><span class="k">Inmobiliario</span><span class="tt">Proyecto en preventa</span></span></div>
+    </div>
+    <p class="note">Composiciones ilustrativas, no corresponden a proyectos entregados.</p>
+  </div>
+</section>
+
+<section class="process" id="proceso" aria-labelledby="h-proc">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Cómo trabajamos</span>
+      <h2 id="h-proc">Un proceso claro, de la idea a la entrega.</h2>
+    </div>
+    <ol class="steps">
+      <li><h3>Diagnóstico</h3><p>Entendemos tu negocio, tu cliente ideal y qué imagen te está faltando hoy para vender.</p></li>
+      <li><h3>Plan visual</h3><p>Definimos el guion, la lista de tomas y el calendario de producción según tus objetivos.</p></li>
+      <li><h3>Producción</h3><p>Día de rodaje y fotografía con equipo profesional, cuidando tu operación para no estorbarla.</p></li>
+      <li><h3>Entrega y uso</h3><p>Material editado, formatos listos para web, redes y portales, con guía para sacarle provecho.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="proof" aria-labelledby="h-proof">
+  <div class="wrap box">
+    <div>
+      <span class="eyebrow">Por qué Gatopardo</span>
+      <h2 id="h-proof" style="margin-bottom:28px">Criterio de estudio, mirada de negocio.</h2>
+      <blockquote>“Una buena imagen no decora tu oferta: la explica antes de que el cliente te escriba.”</blockquote>
+    </div>
+    <ul class="facts">
+      <li><b>Especialistas en hospitalidad y espacio</b><span>Trabajamos solo con hoteles, restaurantes, arquitectura e inmobiliario; conocemos cómo compra tu cliente.</span></li>
+      <li><b>Fotografía y video bajo una sola dirección</b><span>Un mismo lenguaje visual en web, redes y material de venta.</span></li>
+      <li><b>Comunicación directa</b><span>Hablas con quien dirige la producción, desde la primera llamada hasta la entrega.</span></li>
+      <li><b>Referencias a solicitud</b><span>Compartimos casos y contactos de clientes durante la propuesta.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="cta" id="propuesta" aria-labelledby="h-cta">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Siguiente paso</span>
+      <h2 id="h-cta">Cuéntanos qué necesitas vender mejor.</h2>
+      <p>Déjanos tus datos y te respondemos con una propuesta a la medida de tu proyecto. Sin compromiso.</p>
+    </div>
+    <div>
+      <form id="f" novalidate>
+        <div><label for="n">Nombre</label><input id="n" name="nombre" autocomplete="name" required></div>
+        <div><label for="c">Empresa o proyecto</label><input id="c" name="empresa" autocomplete="organization" required></div>
+        <div><label for="q">¿Qué necesitas?</label>
+          <select id="q" name="necesidad" required>
+            <option value="">Selecciona una opción</option>
+            <option>Fotografía y video para hotel</option>
+            <option>Fotografía y video para restaurante</option>
+            <option>Arquitectura o proyecto inmobiliario</option>
+            <option>Propiedad de renta vacacional</option>
+            <option>Otro</option>
+          </select></div>
+        <div><label for="m">Cuéntanos más (opcional)</label><textarea id="m" name="mensaje"></textarea></div>
+        <button class="btn" type="submit">Solicitar propuesta</button>
+        <p class="fine">Usamos tus datos solo para responder a tu solicitud.</p>
+        <div id="ok" role="status" tabindex="-1">Gracias. Recibimos tu solicitud y te escribiremos pronto.</div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="f">
+  <div class="wrap">
+    <div><strong style="color:var(--ink)">Gatopardo Media</strong><br>Fotografía y video comercial · El Salvador</div>
+    <div><a href="#servicios">Servicios</a> &nbsp; <a href="#trabajo">Trabajo</a> &nbsp; <a href="#proceso">Proceso</a> &nbsp; <a href="#propuesta">Contacto</a></div>
+    <div>© 2026 Gatopardo Media</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var bad=[].filter.call(this.querySelectorAll('[required]'),function(i){return !i.value.trim()});
+  if(bad.length){bad[0].focus();bad.forEach(function(i){i.setAttribute('aria-invalid','true')});return}
+  this.querySelector('button').hidden=true;
+  var ok=document.getElementById('ok');ok.style.display='block';ok.focus();
+});
+</script>
+</body>
+</html>
